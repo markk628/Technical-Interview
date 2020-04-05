@@ -21,8 +21,7 @@ Think Out Loud
 
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     var compVal: [Int:Int] = [:]
-    for index in nums.indices {
-        let num = nums[index]
+    for (index,num) in nums.enumerated() {
         let subVal = target - num
         if let lastIndex = compVal[subVal], lastIndex != index{
             return [lastIndex, index]
@@ -32,4 +31,4 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     return []
 }
 
-twoSum([2,3,5,6], 9)
+twoSum([2,3,5,6], 2)
